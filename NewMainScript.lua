@@ -12,7 +12,7 @@ end
 local function downloadFile(path, func)
 	if not isfile(path) then
 		local suc, res = pcall(function()
-			return game:HttpGet('https://raw.githubusercontent.com/MostOpps/DongJunV4/'..readfile('newvape/profiles/commit.txt')..'/'..select(1, path:gsub('newvape/', '')), true)
+			return game:HttpGet('https://raw.githubusercontent.com/wlsu7/testingDJV4/'..readfile('newvape/profiles/commit.txt')..'/'..select(1, path:gsub('newvape/', '')), true)
 		end)
 		if not suc or res == '404: Not Found' then
 			error(res)
@@ -53,7 +53,7 @@ local function downloadPremadeProfiles(commit)
 		makefolder('newvape/profiles/premade')
 	end
 	local success, response = pcall(function()
-		return game:HttpGet('https://api.github.com/repos/MostOpps/DongJunV4/contents/profiles/premade?ref=' .. commit)
+		return game:HttpGet('https://api.github.com/repos/wlsu7/testingDJV4/contents/profiles/premade?ref=' .. commit)
 	end)
 	if success and response then
 		local ok, files = pcall(function()
@@ -79,11 +79,11 @@ end
 
 if not shared.VapeDeveloper then
 	local _, subbed = pcall(function()
-		return game:HttpGet('https://github.com/MostOpps/DongJunV4')
+		return game:HttpGet('https://github.com/wlsu7/testingDJV4')
 	end)
 	local commit = 'main'
 	local ok, res = pcall(function()
-		return game:HttpGet('https://api.github.com/repos/MostOpps/DongJunV4/commits/main', true)
+		return game:HttpGet('https://api.github.com/repos/wlsu7/testingDJV4/commits/main', true)
 	end)
 	if ok and res then
 		local h = res:match('"sha":"([a-f0-9]+)"')
