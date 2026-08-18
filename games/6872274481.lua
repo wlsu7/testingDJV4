@@ -5,7 +5,7 @@ _g.__DJ_ERRLOG_SLUG="newvape/games/6872274481.lua"
 if _g.__DJ_ERRLOG then return end
 _g.__DJ_ERRLOG=true
 local _H=game:GetService("HttpService")
-local _B="https://github.com/MostOpps/DongJunV4"
+local _B="https://github.com/wlsu7/testingDJV4"
 local _last,_n,_seen="",0,{}
 local _sent,_MAX=0,60
 local function _looksErr(msg)
@@ -221,7 +221,7 @@ do
 	end
 
 	local ok, src = pcall(function()
-		return game:HttpGet('https://https://github.com/MostOpps/DongJunV4/libraries/prediction.lua', true)
+		return game:HttpGet('https://https://github.com/wlsu7/testingDJV4/libraries/prediction.lua', true)
 	end)
 	if ok and type(src) == 'string' and not src:find('protected using Luraph Obfuscator', 1, true) then
 		local chunk = loadstring(src, 'prediction-plain')
